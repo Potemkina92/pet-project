@@ -19,6 +19,6 @@ def save_to_db(posts: list) -> None:
             user_id=post.get('userId'),
             title=post.get('title'),
             body=post.get('body'),
-            update_date=
+            update_date=Post.update_date
         )
         p.save()
