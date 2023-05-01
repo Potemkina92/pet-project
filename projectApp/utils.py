@@ -26,10 +26,3 @@ def save_to_db(posts: list) -> None:
         posts_for_save.append(p)
     Post.objects.bulk_create(posts_for_save, ignore_conflicts=True)
     Post.objects.bulk_update(posts_for_save, ['user_id', 'title', 'body', 'update_date'])
-    #     p = Post.objects.bulk_create([Post(user_id=post.get('userId'),
-    #                                   title=post.get('title'),
-    #                                   body=post.get('body'),
-    #                                   update_date=Post.update_date
-    #                                        )])
-    #
-
